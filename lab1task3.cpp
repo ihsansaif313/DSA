@@ -21,6 +21,7 @@ int main()
     cin>>n;
     
 char *arr = new char[n];
+
 for (int i = 0; i < n; i++)
 {
     cout<<"Enter the character at index "<<i+1<<" : ";
@@ -32,15 +33,13 @@ for (int i = 0; i < n; i++)
 {
     cout<<arr[i]<<" ";
 }
-cout<<"\nArray after change case: ";
+
 ChangeCase(arr,n);
 cout<<"\nArray after change case: ";
 for (int i = 0; i < n; i++)
 {
     cout<<arr[i]<<" ";
-    }
-    
-
+}
 
  return 0;
 }
