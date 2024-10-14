@@ -32,7 +32,7 @@ using namespace std;
     if (top>=0)
     {
     top--;
-    cout<<"Last item has been poped";
+    cout<<"Last item has been poped"<<endl;
     }
     
    
@@ -58,7 +58,7 @@ int main()
         cin>>val;
         d.push(val);
     }
-   //d.pop();
+   d.pop();
     d.display();
     
 
