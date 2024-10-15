@@ -29,7 +29,7 @@ class greaternum
 {
     int *arr;
     int size;
-    int top;
+    int top=0;
 
 public:
     greaternum(int size1)
@@ -42,32 +42,48 @@ public:
     {
         int choice;
         cout << "Press 1 to PUSH a value in Stack\nPress 2 to POP a value from Stack\nPress 3 to display the Stack\nPress 4 to Show the next greater element in the Stack\nPress 0 to EXIT\nEnter your choice: ";
-        cin>>choice;
-        if (choice>=0 && choice<=4)
+        cin >> choice;
+        if (choice >= 0 && choice <= 4)
         {
-        return choice;
+            return choice;
         }
         else
         {
-            cout<<"Invilid input"<<endl;
+            cout << "Invilid input" << endl;
             return menu();
         }
-        
-        
     }
-    
-    
 
     void push()
     {
+        for (int i = top; i < size; i++)
+        {
+            cout << "Enter the value to be pushed at position " << i + 1 << ": ";
+            cin >> arr[i];
+            top++;
+            
+        }
+        if (top==size)
+        {
+            cout<<"Stack is full"<<endl;
+        }
+        
+        
     }
 
     void POP()
     {
+       if (top > -1)
+       {
+        top--;
+        cout<<"Element has been Poped out from Stack"<<endl;
+       }
+
+       
+
     }
     void display()
     {
-
     }
     void nextgreater()
     {
@@ -78,29 +94,34 @@ int main()
 {
     int size = 7;
     greaternum g(size);
-    int choice=g.menu();
+    int choice = g.menu();
+    while (choice != 0)
+    {  
     switch (choice)
     {
     case 0:
-        cout<<"Program Terminated";
+        cout << "Program Terminated";
         break;
     case 1:
         g.push();
+        choice=g.menu();
         break;
     case 2:
         g.POP();
+        choice=g.menu();
         break;
     case 3:
         g.display();
+        choice=g.menu();
         break;
-    
-    case 4:
-        cout<<"Program Terminated";
-        break;
-    
-    }
 
+    case 4:
+        g.nextgreater();
+        choice=g.menu();
+        break;
+    }
+    }
     
-    
+
     return 0;
 }
