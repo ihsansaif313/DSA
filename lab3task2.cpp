@@ -29,7 +29,7 @@ class greaternum
 {
     int *arr;
     int size;
-    int top = 0;
+    int top = -1;
 
 public:
     greaternum(int size1)
@@ -56,6 +56,7 @@ public:
 
     void push()
     {
+        top++;
         for (int i = top; i < size; i++)
         {
             cout << "Enter the value to be pushed at position " << i + 1 << ": ";
@@ -64,7 +65,7 @@ public:
         }
         if (top == size)
         {
-            cout << "Stack is full" << endl;
+            cout << "Stack is full.  Cannot push more elements." << endl;
         }
     }
 
@@ -76,53 +77,82 @@ public:
             cout << "Element has been Poped out from Stack\n\n"
                  << endl;
         }
+        else
+        {
+            cout << "Stack is already empty. ";
+        }
     }
     void display()
     {
-        for (int i = 0; i < top; i++)
+        if (top > -1)
         {
-            cout << arr[i] << " ";
+            for (int i = 0; i < top; i++)
+            {
+                cout << arr[i] << " ";
+            }
+            cout << endl
+                 << endl;
         }
-        cout << endl
-             << endl;
+        else
+        {
+            cout << "Stack is empty. ";
+        }
     }
     void nextgreater()
     {
         int next;
         int topp;
-        cout<<"Numbers already in stack is: ";
-         for (int i = 0; i < top; i++)
-        {
-            cout << arr[i] << " ";
-        }
-        cout << endl;
 
-        cout << "Enter num to find the next Greater number on the stack : ";
-        cin >> next;
-
-        if (top != -1)
+        if (top > -1)
         {
-            for (int i = 0; i <top; i++)
+            cout << "Numbers already in stack is: ";
+            for (int i = 0; i < top; i++)
             {
-                if(next==arr[i])
-                {
-                    topp=i;
-                    break;
-                }
-                else
-                {
-                    cout<<"Number you have entered is not available in stack. Check it again please "<<arr[i]<<endl;
-                    nextgreater();
-                }
-                
-                
+                cout << arr[i] << " ";
             }
+            cout << endl;
+
+            cout << "Enter num to find the next Greater number on the stack : ";
+            cin >> next;
+            for (int i = 0; i < top; i++)
+            {
+                if (next == arr[i])
+                {
+                    if (i != top-1)
+                    {
+                        topp = i;
+                        break;
+                    }
+                    else
+                    {
+                        cout<<"No  greater number found.This is the last Greatest number of stack.\n Try another number"<<endl;
+                        nextgreater();
+                    }
+                }
+            }
+
+            int bignum = 0;
+            for (int i = topp + 1; i < top; i++)
+            {
+                if (arr[i] > bignum)
+                {
+                    bignum = arr[i];
+                }
+            }
+            
+            for (int i = topp + 1; i < top; i++)
+            {
+                if (next < arr[i] && arr[i] < bignum)
+                {
+                    bignum = arr[i];
+                }
+            }
+            cout << "Next greater number in stack is : " << bignum << endl<<endl;
         }
         else
         {
-            cout<<"stack is empty!";
+            cout << "stack is empty! ";
         }
-        
     }
 };
 
