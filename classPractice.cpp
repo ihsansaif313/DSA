@@ -41,7 +41,7 @@ struct Queue
     int arr[MAXSIZE];
     int  front, rear;
 
-}obj;
+};
 
 int main(){
 struct Queue obj;
