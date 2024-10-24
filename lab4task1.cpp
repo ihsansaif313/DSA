@@ -3,7 +3,9 @@ Partial solution of a Linear Queue Class is given below. Complete the missing co
 run the program properly
 */
 #include <iostream>
+
 using namespace std;
+
 
 class Queue
 {
@@ -62,8 +64,7 @@ public:
     {
         if (!isEmpty())
         {
-            // implement your logic here
-            //  delete a data item from front end and shift all the remaining items to fill the gap at the front.
+            
         }
         else
         {
@@ -80,12 +81,26 @@ public:
     // check if queue is empty
     bool isEmpty()
     {
-        // implement your logic here
+        if (rear==front)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+        
+        
     }
     // check if queue is full
     bool isFull()
     {
-        // implement your logic here
+        if (rear==size)
+        {
+            return true;
+        }
+        else
+        return false;
     }
 };
 struct queue
@@ -96,5 +111,12 @@ struct queue
 
 int main()
 {
-    
+    int queueSize;
+    cout<<"Enter size of queue: ";
+    cin>>queueSize;
+    Queue q(queueSize);
+     
+
+
+
 }
