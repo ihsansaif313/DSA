@@ -16,6 +16,7 @@ public:
 class Linkedlist
 {
     Node *head;
+    
 
 public:
     Linkedlist()
@@ -29,18 +30,17 @@ public:
         if (head == NULL)
         {
             head = newNode;
+
         }
         else
-        {
-           Node *h=head;
-           while(h->next!=NULL)
+        { 
+            Node *h=head;
+           while (h->next!=NULL)
            {
-            h=h->next;
-            
+             h=h->next;
            }
-
-
-            
+           h->next=newNode;
+           
         }
             
     }
@@ -64,10 +64,17 @@ public:
             while (temp != NULL)
             {
                 count++;
-                cout << count << " Node data is" << temp->data<<endl;
+                cout << count << " Node data is " << temp->data<<endl;
                 temp = temp->next;
+                
+                
             }
         }
+        else
+        {
+            cout<<"empty";
+        }
+        
     }
 };
 
