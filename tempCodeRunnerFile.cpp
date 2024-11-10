@@ -1,50 +1,31 @@
-#include <iostream>
-using namespace std;
-class charCrush
-{
-    char *arr;
-    int top = 0;
-
-public:
-    charCrush()
-    {
-        arr = new char[100];
-    }
-    void push(char c)
-    {
-        if (c != arr[top-1])
-        {
-            arr[top] = c;
-            top++;
-        }
-        else
-        {
-            top--;
-        }
-    }
-
-    void display()
-    {
-        for (int i = 0; i < top; i++)
-        {
-            cout << arr[i] << " ";
-        }
-    }
-};
-
-
-int main()
-{
-    char ch;
-    charCrush obj;
-    while (ch != 'F' && ch != 'f')
-    {
-        cout << "Enter a character (F/f to exit): ";
-        cin >> ch;
-        if (ch != 'F' && ch != 'f')
-        {
-            obj.push(ch);
-        }
-    }
-    obj.display();
-}
+ // void deleteAtHead(int val)
+    // {
+    //     if (head == NULL)
+    //     {
+    //         cout << "List is empty" << endl;
+    //     }
+    //     else if (head->data == val)
+    //     {
+    //         Node *temp = head;
+    //         head = head->next;
+    //         delete temp;
+    //     }
+    //     else
+    //     {
+    //         Node *h = head;
+    //         while (h->next != NULL && h->next->data != val)
+    //         {
+    //             h = h->next;
+    //         }
+    //         if (h->next == NULL)
+    //         {
+    //             cout << "Roll no not found" << endl;
+    //         }
+    //         else
+    //         {
+    //             Node *temp = h->next;
+    //             h->next = h->next->next;
+    //             delete temp;
+    //         }
+    //     }
+    // }
