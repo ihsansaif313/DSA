@@ -65,9 +65,9 @@ int main() {
     Order orderList;
 
     
-    orderList.addOrder("IHSAN", "HGJHJH", 2, 50.75);
-    orderList.addOrder("SAMI", "YGGH", 1, 25);
-    orderList.addOrder("RAHIM", "HJKK", 3, 75.25);
+    orderList.addOrder("IHSAN", "capital square", 2, 50.75);
+    orderList.addOrder("SAMI", "b17", 1, 25);
+    orderList.addOrder("RAHIM", "taxila", 3, 75.25);
 
     orderList.displayOrders();
 
