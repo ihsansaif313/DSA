@@ -136,9 +136,12 @@ int main() {
     bookStack.push("book3", "author3", 158);
     bookStack.push("To Kill a Mockingbird", "Harper Lee", 12);
 
+
     bookStack.search("1984"); 
+
     bookStack.deleteBook("The Great Gatsby"); 
     bookStack.display();
+    
 
     return 0;
 }

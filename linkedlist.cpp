@@ -52,7 +52,7 @@ public:
         }
         cout << endl;
     }
-    void deleteNode(node *&head, int rollNo)
+    void deleteNode(int rollNo)
     {
         if (head == NULL)
             return; // List is empty
@@ -95,7 +95,7 @@ int main()
 
     cout << "Linked List: ";
     list.display();
-    list.deleteNode(list.head, 10); // Remove the node with value 20
+    list.deleteNode(10); // Remove the node with value 20
     cout << "Linked List after removal: ";
     list.display();
     return 0;

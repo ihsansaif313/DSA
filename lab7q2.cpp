@@ -63,8 +63,6 @@ public:
 
 int main() {
     Order orderList;
-
-    
     orderList.addOrder("IHSAN", "capital square", 2, 50.75);
     orderList.addOrder("SAMI", "b17", 1, 25);
     orderList.addOrder("RAHIM", "taxila", 3, 75.25);
@@ -72,4 +70,4 @@ int main() {
     orderList.displayOrders();
 
     return 0;
-}
+} 
