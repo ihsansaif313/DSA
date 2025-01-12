@@ -4,7 +4,7 @@ function which will print the array elements using recursion
 */
 #include <iostream>
 using namespace std;
-void recursePrint(int *arr, int index)
+void recursePrint(char *arr, int index)
 {
     if (arr[index] == '\0') // base case
     {
@@ -19,7 +19,7 @@ void recursePrint(int *arr, int index)
 }
 int main()
 {
-    int arr[10]{1, 2, 3, 4, 5, 6, 7, 8, 9, 0};
+    char arr[10]{'1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
 
     int index = 0;
 
