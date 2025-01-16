@@ -1,44 +1,41 @@
 # **Data Structures and Algorithms (DSA) Repository**
 
-This repository contains a collection of C++ programs that implement various **Data Structures** and **Algorithms**. Each program is designed to solve a specific problem or demonstrate a particular concept in DSA. Below is a brief overview of the programs included in this repository.
+Welcome to the **Data Structures and Algorithms (DSA) Repository**! This collection features C++ programs that implement a variety of data structures and algorithms, each designed to solve specific problems or demonstrate core concepts in DSA.
 
 ---
-
 ## **Table of Contents**
 
-1. **AVL Tree Implementation**
-2. **Consecutive Character Deletion using Stack**
-3. **Binary Search Tree (BST) Implementation**
-4. **Bracket Reversal and Balance Check**
-5. **Book Stack Management System**
-6. **Palindrome Check using Recursion**
-7. **Stack with Next Greater Element**
-8. **Recursive Prime Number Check**
-9. **Recursive Odd Number Display**
-10. **Recursive Array Printing**
-11. **Basic Stack Implementation**
-12. **Array Reversal**
-13. **Stack Implementation using Class**
-14. **Queue Operations**
-15. **Stack using Linked List**
-16. **Queue Implementation using Class**
-17. **Linked List Operations**
-18. **Linked List with Search Functionality**
-19. **Queue Implementation**
-20. **Linked List Operations with Node Deletion**
-21. **Parking Reservation System**
-22. **Linear Queue Partial Solution**
-23. **Find Next Largest Number in Array**
-24. **Queue Implementation using Linked List**
-25. **Dynamic Array Case Conversion**
-26. **Order Management System**
-27. **Doubly Linked List Implementation**
-28. **Student BST Implementation**
-29. **Book Stack Management System**
-30. **Dynamic Array Stack Implementation**
-
+1. AVL Tree Implementation
+2. Consecutive Character Deletion using Stack
+3. Binary Search Tree (BST) Implementation
+4. Bracket Reversal and Balance Check
+5. Book Stack Management System
+6. Palindrome Check using Recursion
+7. Stack with Next Greater Element
+8. Recursive Prime Number Check
+9. Recursive Odd Number Display
+10. Recursive Array Printing
+11. Basic Stack Implementation
+12. Array Reversal
+13. Stack Implementation using Class
+14. Queue Operations
+15. Stack using Linked List
+16. Queue Implementation using Class
+17. Linked List Operations
+18. Linked List with Search Functionality
+19. Queue Implementation
+20. Linked List Operations with Node Deletion
+21. Parking Reservation System
+22. Linear Queue Partial Solution
+23. Find Next Largest Number in Array
+24. Queue Implementation using Linked List
+25. Dynamic Array Case Conversion
+26. Order Management System
+27. Doubly Linked List Implementation
+28. Student BST Implementation
+29. Book Stack Management System
+30. Dynamic Array Stack Implementation
 ---
-
 ## **Program Descriptions**
 
 ### **1. AVL Tree Implementation**
@@ -162,16 +159,24 @@ This repository contains a collection of C++ programs that implement various **D
 ---
 
 ## **Installation Instructions**
-
 1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/ihsansaif313/DSA.git
    ```
-   2. **Clone the Repository:**
-   ```bash
-   cd DSA
+   bash git clone https://github.com/ihsansaif313/DSA.git
    ```
-   1. **Clone the Repository:**
-   ```bash
-   cd DSA
+2. **Navigate to the repository directory:**
    ```
+   bash cd DSA
+   ```
+3. **Compile and run any of the C++ files using a C++ compiler, for example:**
+   ```
+   bash g++ alindrome_recursive_check.cpp -o alindrome_recursive_check./alindrome_recursive_check
+   ```
+   ---
+## License 
+This repository is licensed under the MIT License. See the LICENSE file for more information. 
+## Contributing 
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or additions. 
+## Contact 
+For any questions or inquiries, please contact [IHSAN SAIF](mailto:ihsansaifedwardion@gmail.com). 
+--- 
+Feel free to explore the repository and learn more about various data structures and algorithms implemented in C++.
