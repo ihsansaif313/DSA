@@ -160,16 +160,16 @@ Welcome to the **Data Structures and Algorithms (DSA) Repository**! This collect
 
 ## **Installation Instructions**
 1. **Clone the Repository:**
-   ```
-   bash git clone https://github.com/ihsansaif313/DSA.git
+   ```bash
+   git clone https://github.com/ihsansaif313/DSA.git
    ```
 2. **Navigate to the repository directory:**
-   ```
-   bash cd DSA
+   ```bash
+   cd DSA
    ```
 3. **Compile and run any of the C++ files using a C++ compiler, for example:**
-   ```
-   bash g++ alindrome_recursive_check.cpp -o alindrome_recursive_check./alindrome_recursive_check
+   ```bash
+   g++ alindrome_recursive_check.cpp -o alindrome_recursive_check./alindrome_recursive_check
    ```
    ---
 ## License 
