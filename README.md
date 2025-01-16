@@ -169,7 +169,7 @@ Welcome to the **Data Structures and Algorithms (DSA) Repository**! This collect
    ```
 3. **Compile and run any of the C++ files using a C++ compiler, for example:**
    ```bash
-   g++ alindrome_recursive_check.cpp -o alindrome_recursive_check./alindrome_recursive_check
+   g++ Palindrome_recursive_check.cpp -o Palindrome_recursive_check./Palindrome_recursive_check
    ```
    ---
 ## License 
