@@ -101,7 +101,7 @@ A curated collection of **60+ C++ implementations** covering essential data stru
 
 **Ihsan Saif**  
 [![Email](https://img.shields.io/badge/Email-ihsansaifedwardion%40gmail.com-red?logo=gmail)](mailto:ihsansaifedwardion@gmail.com)  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://linkedin.com/in/yourprofile)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://linkedin.com/in/its-saif-products)
 
 ---
 
