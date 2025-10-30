@@ -33,3 +33,14 @@ int main() {
 
     return 0; // Indicate successful program termination
 }
+
+
+/*📊 Example:
+Let’s say arr = [5, 8, 10, 3] and key = 3:
+- 10 is greater than 3 → shift 10 to the right
+- 8 is greater than 3 → shift 8 to the right
+- 5 is greater than 3 → shift 5 to the right
+- Now insert 3 at index 0
+Final result: [3, 5, 8, 10]*/
+
+
