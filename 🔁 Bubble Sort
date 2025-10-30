@@ -1,0 +1,32 @@
+🔁 Bubble Sort (Repeatedly swaps adjacent elements if they are in the wrong order)
+
+#include <iostream>
+using namespace std;
+
+void bubbleSort(int arr[], int n) {
+    // Outer loop for each pass
+    for (int i = 0; i < n - 1; i++) {
+        // Inner loop for comparing adjacent elements
+        for (int j = 0; j < n - i - 1; j++) {
+            // Swap if elements are in wrong order
+            if (arr[j] > arr[j + 1]) {
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    int arr[] = {5, 2, 9, 1, 5, 6};
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    bubbleSort(arr, n); // Call bubble sort
+
+    // Display sorted array
+    cout << "Bubble Sorted array: ";
+    for (int i = 0; i < n; i++)
+        cout << arr[i] << " ";
+    return 0;
+}
