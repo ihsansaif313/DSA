@@ -1,36 +1,99 @@
-🎯 Selection Sort (Selects the minimum element and places it at the beginning)
+#include <iostream> // Include the standard input-output stream library
+using namespace std; // Use the standard namespace to simplify code syntax
 
-
-#include <iostream>
-using namespace std;
-
+// Function to perform selection sort on an array
 void selectionSort(int arr[], int n) {
-    // Move boundary of unsorted subarray
+    // Loop through each element except the last one
     for (int i = 0; i < n - 1; i++) {
-        int minIndex = i; // Assume current index is minimum
+        int minIndex = i; // Assume the current index holds the minimum value
 
-        // Find index of minimum element in remaining array
+        // Loop through the unsorted portion of the array to find the actual minimum
         for (int j = i + 1; j < n; j++) {
-            if (arr[j] < arr[minIndex])
-                minIndex = j;
+            if (arr[j] < arr[minIndex]) // If a smaller element is found
+                minIndex = j; // Update minIndex to the new minimum's index
         }
 
-        // Swap found minimum with first element
-        int temp = arr[minIndex];
-        arr[minIndex] = arr[i];
-        arr[i] = temp;
+        // Swap the found minimum element with the first element of the unsorted portion
+        int temp = arr[minIndex]; // Store the minimum value temporarily
+        arr[minIndex] = arr[i];   // Move the current element to the minimum's position
+        arr[i] = temp;            // Place the minimum value at the current position
     }
 }
 
+// Main function to execute the program
 int main() {
-    int arr[] = {64, 25, 12, 22, 11};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int arr[] = {64, 25, 12, 22, 11}; // Declare and initialize the array
+    int n = sizeof(arr) / sizeof(arr[0]); // Calculate the number of elements in the array
 
-    selectionSort(arr, n); // Call selection sort
+    selectionSort(arr, n); // Call the selection sort function
 
-    // Display sorted array
+    // Display the sorted array
     cout << "Selection Sorted array: ";
     for (int i = 0; i < n; i++)
-        cout << arr[i] << " ";
-    return 0;
+        cout << arr[i] << " "; // Print each element separated by space
+
+    return 0; // Indicate successful program termination
 }
+
+
+
+/* 📊 Visual Example of Selection Sort
+
+Initial array:  
+```
+[64, 25, 12, 22, 11]
+```
+
+---
+#### 🔁 Pass 1 (i = 0)
+- Find minimum in `[64, 25, 12, 22, 11]` → `11`
+- Swap `64` and `11`  
+➡️ Result:  
+```
+[11, 25, 12, 22, 64]
+```
+
+---
+
+🔁 Pass 2 (i = 1)
+- Find minimum in `[25, 12, 22, 64]` → `12`
+- Swap `25` and `12`  
+➡️ Result:  
+```
+[11, 12, 25, 22, 64]
+```
+
+---
+
+🔁 Pass 3 (i = 2)
+- Find minimum in `[25, 22, 64]` → `22`
+- Swap `25` and `22`  
+➡️ Result:  
+```
+[11, 12, 22, 25, 64]
+```
+
+---
+
+🔁 Pass 4 (i = 3)
+- Find minimum in `[25, 64]` → `25`
+- Already in correct position  
+➡️ Final Sorted Array:  
+```
+[11, 12, 22, 25, 64]
+```
+
+---
+
+### 🧠 Summary of Actions
+
+| Pass | Minimum Found | Swap With | Result                  |
+|------|----------------|-----------|-------------------------|
+| 1    | 11             | 64        | [11, 25, 12, 22, 64]    |
+| 2    | 12             | 25        | [11, 12, 25, 22, 64]    |
+| 3    | 22             | 25        | [11, 12, 22, 25, 64]    |
+| 4    | 25             | 25        | [11, 12, 22, 25, 64]    |
+
+--- *\
+
+Let me know if you'd like this turned into a printable worksheet, animated slide, or integrated into your HT Live session materials!
