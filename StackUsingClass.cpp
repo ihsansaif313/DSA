@@ -1,56 +1,62 @@
-// create stack throug class
-#include<iostream>
-using namespace std;
- class stackThroughClass
- {
- int *stack;
- int count,size1;
+// create stack through class
+#include<iostream> // include input-output stream library
+using namespace std; // use standard namespace
 
- public:
+// define a class named stackThroughClass
+class stackThroughClass
+{
+    int *stack;     // pointer to dynamically allocate stack array
+    int count, size1; // count tracks top index, size1 stores stack size
+
+public:
+    // constructor to initialize stack with given size
     stackThroughClass(int size)
     {
-        size1=size;
-        stack=new int[size];
-        count=-1;
-        
-
+        size1 = size;               // assign input size to size1
+        stack = new int[size];      // dynamically allocate memory for stack
+        count = -1;                 // initialize count to -1 (empty stack)
     }
 
+    // method to push value into stack
     void push(int value1)
+    {
+        if(count < size1 - 1)       // check if stack is not full
         {
-            if(count<size1-1){
-                count++;
-                stack[count]= value1;
+            count++;                // increment count to next position
+            stack[count] = value1;  // assign value to top of stack
         }
-        }
+    }
 
+    // method to pop value from stack
     void pop()
     {
-        if(count>=0){
-            cout<<"value to pop is : "<<stack[count];
-            count--;
+        if(count >= 0)              // check if stack is not empty
+        {
+            cout << "value to pop is : " << stack[count]; // display top value
+            count--;                // decrement count to remove top element
+        }
     }
-    }
-   
- };
+};
 
- 
+// main function
 int main()
 {
-    int size;
-    cout<<"Enter size of array:  ";
-    cin>>size;
-    stackThroughClass s(size);
-    int val;
-    for (int  i = 0; i < size; i++)
+    int size; // variable to hold stack size
+    cout << "Enter size of array:  "; // prompt user for stack size
+    cin >> size; // read stack size from user
+
+    stackThroughClass s(size); // create stack object with given size
+
+    int val; // variable to hold value to push
+    for (int i = 0; i < size; i++) // loop to push values into stack
     {
-        cout<<"Enter value at "<<i+1<<" : ";
-        cin>>val;
-        s.push(val);
-
+        cout << "Enter value at " << i+1 << " : "; // prompt for value
+        cin >> val; // read value
+        s.push(val); // push value into stack
     }
-    cout<<"want to delete item";
-    s.pop();
 
- return 0;
+    cout << "want to delete item"; // message before popping
+    s.pop(); // pop top value from stack
+
+    return 0; // end of program
 }
