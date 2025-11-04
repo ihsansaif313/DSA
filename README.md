@@ -97,7 +97,7 @@ A curated collection of **60+ C++ implementations** covering essential data stru
 
 ---
 
-## 📬 Contact
+## 📬 Contact me
 
 **Ihsan Saif**  
 [![Email](https://img.shields.io/badge/Email-ihsansaifedwardion%40gmail.com-red?logo=gmail)](mailto:ihsansaifedwardion@gmail.com)  
